@@ -1,0 +1,114 @@
+.closing {
+  position: relative;
+  padding: var(--section-pad) 0 0;
+  overflow: hidden;
+}
+
+/* Subtle radial glow behind text */
+.closing-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, var(--c-gold-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.closing-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  padding-bottom: clamp(80px, 10vw, 130px);
+}
+
+/* Ornamental divider */
+.closing-ornament {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.ornament-line {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--c-gold));
+  opacity: 0.35;
+}
+
+.ornament-line:last-child {
+  background: linear-gradient(to left, transparent, var(--c-gold));
+}
+
+.ornament-diamond {
+  font-size: 0.7rem;
+  color: var(--c-gold);
+  opacity: 0.7;
+}
+
+/* Main closing text */
+.closing-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.5vw, 3.6rem);
+  font-weight: 300;
+  color: var(--c-text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  max-width: 680px;
+}
+
+.closing-subtext {
+  font-family: var(--font-body);
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  font-weight: 300;
+  color: var(--c-text-muted);
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+/* Signature */
+.closing-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--c-gold);
+  opacity: 0.75;
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--c-border-soft);
+  padding: 24px 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--c-text-muted);
+}
+
+.footer-year {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--c-text-muted);
+  opacity: 0.5;
+}

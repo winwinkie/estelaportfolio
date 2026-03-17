@@ -1,0 +1,13 @@
+/* Page entrance curtain */
+.page-curtain {
+  position: fixed;
+  inset: 0;
+  background: var(--c-bg);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Ensure main sections stack cleanly */
+main {
+  position: relative;
+}

@@ -1,0 +1,126 @@
+/* ============================================
+   GLOBAL STYLES & DESIGN TOKENS
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color Palette — Refined Neutral */
+  --c-bg:         #0c0c0b;
+  --c-bg-soft:    #111110;
+  --c-bg-card:    #161614;
+  --c-bg-hover:   #1c1c1a;
+  --c-border:     rgba(255,255,255,0.07);
+  --c-border-soft:rgba(255,255,255,0.04);
+
+  --c-text:       #e8e4dc;
+  --c-text-mid:   #a09a90;
+  --c-text-muted: #5a554e;
+
+  --c-gold:       #c9a96e;
+  --c-gold-soft:  rgba(201,169,110,0.12);
+  --c-gold-glow:  rgba(201,169,110,0.06);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing */
+  --section-pad:  clamp(80px, 10vw, 140px);
+  --gap:          clamp(16px, 3vw, 32px);
+
+  /* Motion */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--c-bg); }
+::-webkit-scrollbar-thumb { background: var(--c-text-muted); border-radius: 2px; }
+
+/* Selection */
+::selection {
+  background: var(--c-gold-soft);
+  color: var(--c-gold);
+}
+
+/* Typography base */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--c-text-mid);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utility */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--c-gold);
+  opacity: 0.6;
+}
+
+/* Divider line */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--c-border);
+}
